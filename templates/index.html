@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello</title>
+</head>
+<body>
+    <h1>Hello World!</h1>
+    <h2>Welcome to FlaskApp!</h2>
+    <h3>{{ utc_dt }}</h3>
+
+    <h1>Register</h1>
+
+<form action={{ url_for("register") }} method="post">
+    <label for="username">First name:</label><br>
+    <input type="text" id="username" name="username"><br>
+    <label for="password">Last name:</label><br>
+    <input type="password" id="password" name="password">
+    <input type="submit" value="Submit">
+</form>
+
+<h1>Login</h1>
+
+<form action={{ url_for("login") }} method="post">
+    <label for="username">First name:</label><br>
+    <input type="text" id="username_" name="username"><br>
+    <label for="password">Last name:</label><br>
+    <input type="password" id="password_" name="password">
+    <input type="submit" value="Submit">
+</form>
+
+{% if username %}
+    <h5>Welcome {{ username }}</h5>
+{% endif %}
+
+
+</body>
+</html>
